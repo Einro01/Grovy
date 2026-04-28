@@ -278,7 +278,7 @@ function addTask(col,form){
 function saveTask(updated){
   pushHistory();
   st.tasks=st.tasks.map(t=>t.id===updated.id?{...updated}:t);
-  saveTasks();renderBoard();
+  saveTasks();renderBoard();closeModal();
 }
 function deleteTask(id){
   if(!confirm("Delete this task?"))return;
